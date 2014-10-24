@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Confirmação</title>
+        <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+        <link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+        <script src="_js/scripts.js"></script>
+    </head>
+    <body>
+        <div id="interface">
+            <header>
+                <h1>Confirmação de matrícula</h1>
+            </header>
+
+            <section id="corpo">
+                <h2>Matrícula realizada com sucesso !</h2>
+                <h3>Obrigado =)</h3>
+
+                <div id="interesse">
+                    <label class="col-sm-5">Digite algo que você deseja aprender neste curso: </label>
+                    <div class="col-sm-5">
+                        <input type="text" id="entrada" class="form-control" oninput="adicionar()">
+                    </div>
+                </div>
+
+                <br/>
+                <br/>
+
+                <div id="table-interesse">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Assunto</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="addr0">
+                                <td>teste</td>
+                                <td>links</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button id="adiciona" class="btn btn-primary">adicionar</button>
+                <a href="index.html">Clique aqui para voltar ao início</a>
+
+
+
+            </section>
+
+            <footer id="rodape">
+                <h3>Direitos reservados &copy; Outubro - 2014</h3>
+                <h4>Leonardo C. Cordeiro</h4>
+                <a href="https://www.facebook.com/leo.cc14">Facebook</a> <a href="https://twitter.com/leo_carvalhoc">Twitter</a>
+            </footer>
+
+            <script>
+                $(document).ready(function() {
+                    var i = 1;
+                    $("#adiciona").click(function () {
+                        $('#addr' + i).html("<td>" + (i + 1) + "</td><td>link</td>");
+
+                        $('#table-interesse').append('<tr id="addr' + (i + 1) + '"></tr>');
+                        i++;
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>
