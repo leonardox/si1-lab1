@@ -22,33 +22,36 @@
                 <div id="interesse">
                     <label class="col-sm-5">Digite algo que você deseja aprender neste curso: </label>
                     <div class="col-sm-5">
-                        <input type="text" id="entrada" class="form-control" oninput="adicionar()">
+                        <form method="get">
+                            <input type="text" id="entrada" class="form-control">
+                        </form>
                     </div>
                 </div>
 
                 <br/>
                 <br/>
 
-                <div id="table-interesse">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Assunto</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr id="addr0">
-                                <td>teste</td>
-                                <td>links</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <table class="col-sm-5 table" id="tabela-interesse">
+                                <tr>
+                                    <td class="text-info">Temas de interesse:</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-5">
+                            <table class="table" id="tabela-conhecido">
+                                <tr>
+                                    <td class="text-info"><span>Temas já conhecidos:</span></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <button id="adiciona" class="btn btn-primary">adicionar</button>
-                <a href="index.html">Clique aqui para voltar ao início</a>
-
-
 
             </section>
 
@@ -57,18 +60,6 @@
                 <h4>Leonardo C. Cordeiro</h4>
                 <a href="https://www.facebook.com/leo.cc14">Facebook</a> <a href="https://twitter.com/leo_carvalhoc">Twitter</a>
             </footer>
-
-            <script>
-                $(document).ready(function() {
-                    var i = 1;
-                    $("#adiciona").click(function () {
-                        $('#addr' + i).html("<td>" + (i + 1) + "</td><td>link</td>");
-
-                        $('#table-interesse').append('<tr id="addr' + (i + 1) + '"></tr>');
-                        i++;
-                    });
-                });
-            </script>
         </div>
     </body>
 </html>
