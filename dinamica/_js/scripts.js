@@ -17,8 +17,9 @@ function Adicionar() {
             + "<td>"
             + document.getElementById("entrada").value
             + "</td>"
-            + "<td><img src='http://sr.photos2.fotosearch.com/bthumb/CSP/CSP992/k12540490.jpg' class='btnAlterar' width='25px' heidth='25px' title='Alterar'>"
-            + "<img src='http://pixabay.com/static/uploads/photo/2013/07/12/12/48/recycle-bin-146275_640.png' class='btnExcluir' width='15px' heidth='15px' title='Excluir'/></td>"
+            + "<td><img src='_imagens/excluir.png' class='btnExcluir' width='15px' heidth='15px' title='Excluir'/>   "
+            + "   <img src='_imagens/seta.png' class='btnAlterar' width='25px' heidth='25px' title='Alterar'>"
+            + "</td>"
             + "</tr>");
 
     $(".btnExcluir").bind("click", Excluir);
@@ -30,7 +31,6 @@ function Alterar() {
     var valor = $(this).parent().parent();
     $("#tabela-conhecido tbody").append(valor);
     $(".btnExcluir").bind("click", Excluir);
-    $(".btnAlterar").bind("click", Alterar1);
 };
 
 function Excluir() {
